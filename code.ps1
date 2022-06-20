@@ -32,6 +32,6 @@ Get-ChildItem -path $path -Recurse -Directory|ForEach-Object{
         }
     }
 }
-Get-ChildItem -path $path -Recurse -Exclude SB_* -Directory| Rename-Item -NewName {'SB_' + $_.Name + '_' + $date}
+Get-ChildItem -path $path -Recurse -Exclude AL_* -Directory| Rename-Item -NewName {'AL_' + $_.Name + '_' + $date}
 Get-ChildItem -path $path -Recurse| Rename-Item -NewName {$_.Name -replace "[' '\{]", ''}
 Get-ChildItem -path $path -Recurse| Rename-Item -NewName {$_.Name -replace "[-;,$\{]", '_'}
